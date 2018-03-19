@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dan's Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="jumbotron">
+                    <h1>Dan's Train Schedule</h1>
+                    <p>Trains come and trains go, but the station is forever.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default" id="employeeInfoTable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current Train Schedule</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" id="name"></th>
+                                    <td id="trainName"></td>
+                                    <td id="destination"></td>
+                                    <td id="frequency"></td>
+                                    <td id="Next Arrival"></td>
+                                    <td id="Minutes Away"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default" id="addEmployee">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Train</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="newTrain">Train Name</label>
+                                <input class="form-control" id="newTrain" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="newDestination">Destination</label>
+                                <input class="form-control" id="newDestination" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="newFirstTrainTime">First Train Time (HH/MM - Military Time)</label>
+                                <input class="form-control" id="newFirstTrainTime" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="newFrequency">Frequency (minutes)</label>
+                                <input class="form-control" id="newFrequency" type="text">
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
